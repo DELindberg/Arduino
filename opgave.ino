@@ -34,10 +34,10 @@ void setup() {
   MsTimer2::set(1, countDown); // execute function keyRead by given interval in ms
   MsTimer2::start();
 
-  float toPrint;
+  
   //Print the previous result from the EEPROM storage
   Serial.print("Previous result: ");
-  Serial.println(EEPROM.get(1000, toPrint));
+  Serial.println(EEPROM.read(1000));
   
 }
 
